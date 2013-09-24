@@ -6,7 +6,6 @@ var express = require( 'express' ),
     stylus  = require( 'stylus' ),
     nib     = require( 'nib' );
 
-
 /**
  *  Define the sample application.
  */
@@ -45,11 +44,8 @@ var SampleApp = function()
     {
         if( typeof self.zcache === "undefined" )
         {
-            self.zcache = { 'index.html': '' };
-        }
-
-        //  Local cache for static content.
-        //self.zcache[ 'index.html' ] = fs.readFileSync('./index.html');
+            self.zcache = { };
+        };
     };
 
     /**
