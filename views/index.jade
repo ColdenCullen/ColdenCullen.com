@@ -1,0 +1,31 @@
+!!! html
+html(lang="en")
+    head
+        // Title and icon
+        title Colden Cullen
+        link(rel='icon', type='image/png', href='/img/icon.png')
+        
+        // Stylesheets too include
+        link(rel='stylesheet', href="/stylesheets/lib/normalize.css")
+        link(rel='stylesheet', href="/stylesheets/lib/foundation.min.css")
+        link(rel='stylesheet', href="/stylesheets/style.css")
+        
+        // Scripts to include
+        script(src="/js/lib/vendor/custom.modernizr.js")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+        script(src="/js/lib/foundation.min.js")
+        script(src="/js/script.js")
+        
+        // Values to pass from server to client
+        script(type='text/javascript').
+            var routePath = "#{routePath}";
+            
+    body
+        include partials/header
+        
+        div.pageContainer
+            include pages/home
+            include pages/about
+            include pages/resume
+            include pages/projects
+            include pages/blog

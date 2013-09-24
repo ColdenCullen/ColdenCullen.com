@@ -1,0 +1,34 @@
+// Include fonts
+@import url("https://fonts.googleapis.com/css?family=Source\+Code\+Pro|Russo+One")
+
+// Reset everything
+global-reset()
+
+// Mixin to allow for full sizing
+full-size()
+    width: 100%
+    height: 100%
+
+$num-pages = 5
+
+html, body
+    full-size()
+
+div.pageContainer
+    width: (100% * $num-pages)
+    height: 100%
+
+div.pageContainer section.page
+    width: (100% / $num-pages)
+    height: 100%
+    display: inline-block
+
+nav.top-bar
+    font: 2.5em "Russo One" sans-serif
+
+// Import page styles
+@import 'pages/home'
+@import 'pages/about'
+@import 'pages/resume'
+@import 'pages/projects'
+@import 'pages/blog'

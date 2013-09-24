@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Source\+Code\+Pro|Russo+One");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+div.pageContainer {
+  width: 500%;
+  height: 100%;
+}
+div.pageContainer section.page {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+nav.top-bar {
+  font: 2.5em "Russo One" sans-serif;
+}
+section.page#home {
+  background-color: #ff0;
+}
+section.page#about {
+  background-color: #00f;
+}
+section.page#resume {
+  background-color: #008080;
+}
+section.page#projects {
+  background-color: #008000;
+}
+section.page#blog {
+  background-color: #f00;
+}
