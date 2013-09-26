@@ -1,8 +1,7 @@
 #!/bin/env node
-//  OpenShift sample Node application
+// Load dependencies
 var express = require( 'express' ),
     fs      = require( 'fs' ),
-    jade    = require( 'jade' ),
     stylus  = require( 'stylus' ),
     nib     = require( 'nib' );
 
@@ -45,7 +44,7 @@ var SampleApp = function()
         if( typeof self.zcache === "undefined" )
         {
             self.zcache = { };
-        };
+        }
     };
 
     /**
@@ -101,16 +100,20 @@ var SampleApp = function()
     self.buildPage = function( req, res )
     {
         // Set header for response
-        res.setHeader('Content-Type', 'text/html');
+        res.set('Content-Type', 'text/html');
         
         // Try to find page in cache.
         var cachedPage = self.cache_get( req.route.path );
         
         if( dev || typeof cachedPage === "undefined" )
         {
+            // Render the page
             self.app.render(
                 'index',
-                { routePath: req.route.path },
+                {
+                    routePath: req.route.path,
+                    dev: dev
+                },
                 function( err, html )
                 {
                     self.cache_set( req.route.path, html );
@@ -120,6 +123,7 @@ var SampleApp = function()
         }
         else
         {
+            // Return cached version
             return res.send( cachedPage );
         }
     };
@@ -130,8 +134,14 @@ var SampleApp = function()
     self.createRoutes = function()
     {
         self.routes = { };
+            
+        self.routes[ '/projects/:name' ] = function( req, res ) {
+            res.set( 'Location', '/projects/' + req.params.name );
+            self.buildPage( req, res );
+        };
 
         self.routes[ '/' ] =
+        self.routes[ '/home' ] =
         self.routes[ '/about' ] =
         self.routes[ '/resume' ] =
         self.routes[ '/projects' ] =
@@ -205,9 +215,6 @@ var SampleApp = function()
     };
 };   /*  Sample Application.  */
 
-/**
- *  main():  Main code.
- */
 var zapp = new SampleApp();
 zapp.initialize();
 zapp.start();

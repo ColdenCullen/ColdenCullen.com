@@ -1,5 +1,14 @@
 $( function($) {
     $(document).foundation();
     
-    $( "#routePath" ).html( routePath );
+    pagescroller( { initialPage: routePath } );
+    
+    // Setup link click events
+    // $( '.pagelink' ).click( function( event ) {
+    //     event.preventDefault();
+    //     scrollToPage( $( event.target ).attr( 'href' ) );
+    // } );
+    
+    // Scroll to inital page
+    //scrollToPage( routePath );
 } );

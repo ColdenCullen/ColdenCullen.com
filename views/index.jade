@@ -6,6 +6,7 @@ html(lang="en")
         link(rel='icon', type='image/png', href='/img/icon.png')
         
         // Stylesheets too include
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Open+Sans|Russo+One")
         link(rel='stylesheet', href="/stylesheets/lib/normalize.css")
         link(rel='stylesheet', href="/stylesheets/lib/foundation.min.css")
         link(rel='stylesheet', href="/stylesheets/style.css")
@@ -13,17 +14,20 @@ html(lang="en")
         // Scripts to include
         script(src="/js/lib/vendor/custom.modernizr.js")
         script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+        script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
         script(src="/js/lib/foundation.min.js")
         script(src="/js/script.js")
+        script(src="/js/pagescroller.js")
         
         // Values to pass from server to client
         script(type='text/javascript').
             var routePath = "#{routePath}";
+            var dev = #{dev};
             
     body
         include partials/header
         
-        div.pageContainer
+        div.pagecontainer-horiz-5
             include pages/home
             include pages/about
             include pages/resume

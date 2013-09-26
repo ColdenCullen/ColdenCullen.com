@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "Colden Cullen's Website",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "Colden Cullen's Website",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -9,14 +9,14 @@
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url":  "http://www.openshift.com/"
+    "name": "Colden Cullen",
+    "email": "ColdenCullen@gmail.org",
+    "url":  "http://ColdenCullen.com/"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://www.ColdenCullen.com/",
   "repository": {
     "type": "git",
-    "url": "https://gitub.com/openshift/origin-server"
+    "url": "https://github.com/ColdenCullen/ColdenCullen.com"
   },
 
   "engines": {
@@ -30,6 +30,7 @@
       "stylus": "0.38.x",
       "nib": "1.0.x"
   },
+  
   "devDependencies": {},
   "bundleDependencies": [],
 
