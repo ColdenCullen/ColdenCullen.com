@@ -134,11 +134,15 @@ var SampleApp = function()
     self.createRoutes = function()
     {
         self.routes = { };
-            
-        self.routes[ '/projects/:name' ] = function( req, res ) {
-            res.set( 'Location', '/projects/' + req.params.name );
-            self.buildPage( req, res );
-        };
+        
+        var projects = [
+            'overview',
+            '192',
+            'openmusic',
+            'glif',
+            'storytown',
+            'sgpx'
+        ];
 
         self.routes[ '/' ] =
         self.routes[ '/home' ] =
@@ -147,6 +151,9 @@ var SampleApp = function()
         self.routes[ '/projects' ] =
         self.routes[ '/blog' ] =
             self.buildPage;
+            
+        for( var i = 0; i < projects.length; ++i )
+            self.routes[ '/projects/' + projects[ i ] ] = self.buildPage;
     };
 
     /**

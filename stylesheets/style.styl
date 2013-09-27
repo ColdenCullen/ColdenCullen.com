@@ -8,12 +8,28 @@ full-size()
 
 html, body
     full-size()
+    background-color: rgb( 39, 40, 34 )
     overflow: hidden
-
-//@import pagr
 
 nav.top-bar
     font: 2.5em "Russo One" sans-serif
+    
+    ul li:not(.menu-icon) a:hover
+        background-color: #fff
+        color: #111
+        transition: all 200ms ease-out
+    
+    .name h1 a
+        width: auto
+
+nav.top-bar.expanded
+    margin-bottom: 0
+    
+.aligner
+    full-size()
+    display: flex
+    align-items: center;
+    justify-content: center;
 
 // Import page styles
 @import 'pages/home'

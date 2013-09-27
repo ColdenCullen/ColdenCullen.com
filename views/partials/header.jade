@@ -1,28 +1,31 @@
 div.fixed
     nav.top-bar
         ul.title-area
-            li.name
-                h1: a(href="/home", class="pagrlink") Colden Cullen
+            li.name: h1: a.pagrlink(href="/home") Colden Cullen
+            li.toggle-topbar.menu-icon
+                a(href="#")
+                    span
 
         section.top-bar-section
             ul.right
                 li.divider
-                li: a(href="/home", class="pagrlink") Home
+                li: a.pagrlink(href="/home") Home
                 li.divider
-                li: a(href="/about", class="pagrlink") About Me
+                li: a.pagrlink(href="/about") About Me
                 li.divider
-                li: a(href="/resume", class="pagrlink") Resume
+                li: a.pagrlink(href="/resume") Resume
                 li.divider
                 li.has-dropdown
-                    a(href="/projects/overview", class="pagrlink") Projects
+                    a.pagrlink.hide-for-small(href="/projects/overview") Projects
+                    //a.pagrlink.show-for-small Projects
                     ul.dropdown
-                        li: a(href="/projects/192", class="pagrlink") Project 192
-                        li: a(href="/projects/openmusic", class="pagrlink") OpenMusic
-                        li: a(href="/projects/glif", class="pagrlink") GLIF
-                        li: a(href="/projects/storytown", class="pagrlink") StoryTown
-                        li: a(href="/projects/sgpx", class="pagrlink") SGPX
-                        li: a(href="http://129.21.20.27/users/cpc1668/") MAGIC
+                        li: a.pagrlink(href="/projects/192") Project 192
+                        li: a.pagrlink(href="/projects/openmusic") OpenMusic
+                        li: a.pagrlink(href="/projects/glif") GLIF
+                        li: a.pagrlink(href="/projects/storytown") StoryTown
+                        li: a.pagrlink(href="/projects/sgpx") SGPX
+                        li: a(href="http://magic.rit.edu/users/cpc1668/") MAGIC
                         li.divider
-                        li: a(href="/projects/overview", class="pagrlink") See all &rarr;
+                        li: a.pagrlink(href="/projects/overview") See all &rarr;
                 li.divider
-                li: a(href="/blog", class="pagrlink") Blog
+                li: a.pagrlink(href="/blog") Blog
