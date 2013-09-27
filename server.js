@@ -12,7 +12,7 @@ var SampleApp = function()
 {
     //  Scope.
     var self = this;
-    var dev  = true;
+    var dev  = process.env.DEV || true;
 
     /*  ================================================================  */
     /*  Helper functions.                                                 */
