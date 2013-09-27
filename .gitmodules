@@ -1,0 +1,3 @@
+[submodule "static/lib/pagr"]
+	path = static/lib/pagr
+	url = https://github.com/ColdenCullen/pagr.git
