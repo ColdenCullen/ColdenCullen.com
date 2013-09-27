@@ -1,9 +1,10 @@
 .pagecontainer-horiz {
     position: relative;
     height: 100%;
+    display: -webkit-flex;
+    display: -mox-flex;
     display: flex;
 }
-    
 .pagecontainer-horiz > .page {
     display: inline-block;
     height: 100%;
@@ -14,5 +15,5 @@
     width: 100%;
 }
 .pagecontainer-vert > .page {
-    width: 100%
+    width: 100%;
 }
