@@ -1,5 +1,5 @@
 $( function($) {
     $(document).foundation();
     
-    pagescroller( { initialPage: routePath } );
+    pagr( { initialPage: routePath } );
 } );
