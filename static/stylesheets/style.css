@@ -109,7 +109,7 @@ nav.top-bar ul li:not(.menu-icon) a:hover {
   transition: all 200ms ease-out;
 }
 nav.top-bar .name h1 a {
-  width: auto;
+  display: inline;
 }
 nav.top-bar.expanded {
   margin-bottom: 0;
@@ -144,16 +144,21 @@ section.page#home .main {
 }
 @media only screen and (max-width: 768px) {
   section.page#home .main {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  section.page#home .main {
     font-size: 2em;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) and (min-width: 1280px) {
   section.page#home .main {
     font-size: 4em;
   }
 }
-section.page#about {
-  background-color: #00f;
+section.page#about .main {
+  color: #fff;
 }
 section.page#resume {
   background-color: #008080;
