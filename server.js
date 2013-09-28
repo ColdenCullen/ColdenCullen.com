@@ -1,14 +1,13 @@
 #!/bin/env node
 // Load dependencies
 var express = require( 'express' ),
-    fs      = require( 'fs' ),
     stylus  = require( 'stylus' ),
     nib     = require( 'nib' );
 
 /**
  *  Define the sample application.
  */
-var SampleApp = function()
+var Site = function()
 {
     //  Scope.
     var self = this;
@@ -59,6 +58,11 @@ var SampleApp = function()
      *  @param {string} val  Value to add to cache.
      */
     self.cache_set = function( key, val ) { self.zcache[ key ] = val; };
+    
+    /**
+     *  Empties stored pages
+     */
+    self.cache_dump = function() { self.zcache = { }; };
 
     /**
      *  terminator === the termination handler
@@ -135,6 +139,7 @@ var SampleApp = function()
     {
         self.routes = { };
         
+        // Projects that can be rendered
         var projects = [
             'overview',
             '192',
@@ -144,6 +149,7 @@ var SampleApp = function()
             'sgpx'
         ];
 
+        // Most routes will use the same page
         self.routes[ '/' ] =
         self.routes[ '/home' ] =
         self.routes[ '/about' ] =
@@ -151,7 +157,8 @@ var SampleApp = function()
         self.routes[ '/projects' ] =
         self.routes[ '/blog' ] =
             self.buildPage;
-            
+        
+        // Add projects
         for( var i = 0; i < projects.length; ++i )
             self.routes[ '/projects/' + projects[ i ] ] = self.buildPage;
     };
@@ -174,7 +181,8 @@ var SampleApp = function()
         self.app.set( 'views', __dirname + '/views' );
         self.app.set( 'view engine', 'jade' );
         
-        //self.app.use( express.logger( 'dev' ) )
+        //if( dev )
+        //    self.app.use( express.logger( 'dev' ) );
         
         self.app.use(
             stylus.middleware(
@@ -222,7 +230,7 @@ var SampleApp = function()
     };
 };   /*  Sample Application.  */
 
-var zapp = new SampleApp();
+var zapp = new Site();
 zapp.initialize();
 zapp.start();
 

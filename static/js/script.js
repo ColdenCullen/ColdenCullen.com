@@ -1,5 +1,7 @@
 $( function($) {
     $(document).foundation();
     
-    pagr( { initialPage: routePath } );
+    pagr( {
+        initialPage: routePath
+    } );
 } );
