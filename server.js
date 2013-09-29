@@ -199,7 +199,6 @@ var Site = function()
         // Setup Coffee-Script middleware
         self.app.use( coffee( {
             src:        __dirname + '/coffeescripts',
-            dest:       __dirname + '/static/javascripts',
             prefix:     'javascripts',
             force:      dev,
             debug:      debug,
