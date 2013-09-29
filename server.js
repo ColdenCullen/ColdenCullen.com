@@ -2,16 +2,18 @@
 // Load dependencies
 var express = require( 'express' ),
     stylus  = require( 'stylus' ),
-    nib     = require( 'nib' );
+    nib     = require( 'nib' ),
+    coffee  = require( 'coffee-middleware' );
 
 /**
  *  Define the sample application.
  */
 var Site = function()
 {
-    //  Scope.
+    // Scope.
     var self = this;
     var dev  = process.env.DEV || true;
+    var debug = false && dev;
 
     /*  ================================================================  */
     /*  Helper functions.                                                 */
@@ -103,6 +105,7 @@ var Site = function()
 
     self.buildPage = function( req, res )
     {
+        
         // Set header for response
         res.set('Content-Type', 'text/html');
         
@@ -114,12 +117,8 @@ var Site = function()
             // Render the page
             self.app.render(
                 'index',
-                {
-                    routePath: req.route.path,
-                    dev: dev
-                },
-                function( err, html )
-                {
+                { routePath: req.route.path, dev: dev },
+                function( err, html ) {
                     self.cache_set( req.route.path, html );
                     res.send( html );
                 }
@@ -181,25 +180,32 @@ var Site = function()
         self.app.set( 'views', __dirname + '/views' );
         self.app.set( 'view engine', 'jade' );
         
-        //if( dev )
-        //    self.app.use( express.logger( 'dev' ) );
+        if( debug )
+            self.app.use( express.logger( 'dev' ) );
         
-        self.app.use(
-            stylus.middleware(
-                {
-                    src:    __dirname + '/',
-                    dest:   __dirname + '/static',
-                    force:  dev,
-                    compile:function( str, path )
-                    {
-                        return stylus( str )
-                            .set( 'filename', path )
-                            .use( nib() )
-                            .import( 'nib' );
-                    }
-                }
-            )
-        );
+        //Setup stylus middleware
+        self.app.use( stylus.middleware( {
+            src:    __dirname + '/',
+            dest:   __dirname + '/static',
+            force:  dev,
+            compile:function( str, path ) {
+                return stylus( str )
+                    .set( 'filename', path )
+                    .use( nib() )
+                    .import( 'nib' );
+            }
+        } ) );
+        
+        // Setup Coffee-Script middleware
+        self.app.use( coffee( {
+            src:        __dirname + '/coffeescripts',
+            dest:       __dirname + '/static/javascripts',
+            prefix:     'javascripts',
+            force:      dev,
+            debug:      debug,
+            once:       !dev,
+            compress:   !dev
+        } ) );
         
         self.app.use( express.static( __dirname + '/static' ) );
     };
@@ -233,4 +239,3 @@ var Site = function()
 var zapp = new Site();
 zapp.initialize();
 zapp.start();
-

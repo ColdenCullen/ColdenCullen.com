@@ -28,7 +28,8 @@
       "express": "3.4.x",
       "jade": "0.35.x",
       "stylus": "0.38.x",
-      "nib": "1.0.x"
+      "nib": "1.0.x",
+      "coffee-middleware": "0.2.x"
   },
   
   "devDependencies": {},
