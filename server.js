@@ -117,7 +117,7 @@ var Site = function()
             // Render the page
             self.app.render(
                 'index',
-                { routePath: req.route.path, dev: dev, semantic: false },
+                { routePath: req.route.path, dev: dev, semantic: true },
                 function( err, html ) {
                     self.cache_set( req.route.path, html );
                     res.send( html );
