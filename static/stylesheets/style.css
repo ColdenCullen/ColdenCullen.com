@@ -96,6 +96,21 @@ body {
   background-color: #272822;
   overflow: hidden;
 }
+nav.ui.menu.fixed ul li:not(.menu-icon) a:hover {
+  background-color: #fff;
+  color: #111;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+nav.ui.menu.fixed .ui.dropdown .menu .item,
+nav.ui.menu.fixed .item {
+  font: 2rem "Russo One", sans-serif;
+  height: auto;
+  padding: 5px 10px !important;
+}
 nav.top-bar {
   font: 2.5em "Russo One" sans-serif;
 }

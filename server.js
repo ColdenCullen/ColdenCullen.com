@@ -117,7 +117,7 @@ var Site = function()
             // Render the page
             self.app.render(
                 'index',
-                { routePath: req.route.path, dev: dev },
+                { routePath: req.route.path, dev: dev, semantic: false },
                 function( err, html ) {
                     self.cache_set( req.route.path, html );
                     res.send( html );
@@ -180,8 +180,8 @@ var Site = function()
         self.app.set( 'views', __dirname + '/views' );
         self.app.set( 'view engine', 'jade' );
         
-        if( debug )
-            self.app.use( express.logger( 'dev' ) );
+        //if( debug )
+        //    self.app.use( express.logger( 'dev' ) );
         
         //Setup stylus middleware
         self.app.use( stylus.middleware( {
@@ -199,11 +199,9 @@ var Site = function()
         // Setup Coffee-Script middleware
         self.app.use( coffee( {
             src:        __dirname + '/coffeescripts',
-            prefix:     'javascripts',
+            prefix:     '/javascripts',
             force:      dev,
-            debug:      debug,
-            once:       !dev,
-            compress:   !dev
+            debug:      debug
         } ) );
         
         self.app.use( express.static( __dirname + '/static' ) );
