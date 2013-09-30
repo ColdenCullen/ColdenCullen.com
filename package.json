@@ -28,11 +28,15 @@
     "stylus": "0.38.x",
     "nib": "1.0.x",
     "coffee-middleware": "0.2.x",
-    "bower": "1.2.x",
-    "grunt": "0.4.x"
+    "bower": "1.2.x"
   },
   "devDependencies": {
-    "grunt-cli": "0.1.x"
+    "grunt": "0.4.x",
+    "grunt-cli": "0.1.x",
+    "grunt-contrib-watch": "0.5.x",
+    "grunt-contrib-coffee": "0.7.x",
+    "grunt-contrib-stylus": "0.8.x",
+    "grunt-contrib-jade": "0.8.x"
   },
   "bundleDependencies": [],
   "scripts": {
