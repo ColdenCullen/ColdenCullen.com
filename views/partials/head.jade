@@ -8,12 +8,7 @@ link(rel='icon', type='image/png', href='/images/icon.png')
 // Stylesheets too include
 link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Open+Sans|Russo+One|Ubuntu+Mono")
 link(rel='stylesheet', href="/lib/vendor/stylesheets/normalize.css")
-
-- if( semantic )
-    link(rel='stylesheet', href="/lib/semantic/stylesheets/semantic#{min}.css")
-- else
-    link(rel='stylesheet', href="/lib/foundation/stylesheets/foundation#{min}.css")
-
+link(rel='stylesheet', href="/lib/foundation/stylesheets/foundation#{min}.css")
 link(rel='stylesheet', href="/lib/pagr/stylesheets/pagr.css")
 link(rel='stylesheet', href="/stylesheets/style.css")
 
@@ -21,11 +16,6 @@ link(rel='stylesheet', href="/stylesheets/style.css")
 script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
 script(src="/lib/vendor/javascripts/custom.modernizr.js")
-
-- if( semantic )
-    script(src="/lib/semantic/javascripts/semantic#{min}.js")
-- else
-    script(src="/lib/foundation/javascripts/foundation#{min}.js")
-
+script(src="/lib/foundation/javascripts/foundation#{min}.js")
 script(src="/lib/pagr/javascripts/pagr.js")
 script(src="/javascripts/script.js")

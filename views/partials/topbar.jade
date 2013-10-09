@@ -1,61 +1,31 @@
-- if( semantic ) {
-    nav.ui.menu.fixed
-        div.left.menu
-            a.item.name.pagrlink(href="/home")
-                | Colden Cullen
-        div.right.menu
-            a.item.pagrlink(href="/home")
-                i.home.icon
-                | Home
-            a.item.pagrlink(href="/about")
-                i.user.icon
-                | About Me
-            a.item.pagrlink(href="/resume")
-                i.file.icon
-                | Resume
-            div.ui.dropdown.item.link.pagrlink(href="/projects/overview")
-                | Projects
-                i.dropdown.icon
-                div.menu
-                    a.item.pagrlink(href="/projects/192") Project 192
-                    a.item.pagrlink(href="/projects/openmusic") OpenMusic
-                    a.item.pagrlink(href="/projects/glif") GLIF
-                    a.item.pagrlink(href="/projects/storytown") StoryTown
-                    a.item.pagrlink(href="/projects/sgpx") SGPX
-                    a.item(href="http://magic.rit.edu/users/cpc1668/") MAGIC
-            a.item.pagrlink(href="/blog")
-                i.comment.icon
-                | Blog
-- } else {
-    div.fixed
-        nav.top-bar
-            ul.title-area
-                li.name: h1: a.pagrlink(href="/home") Colden Cullen
-                li.toggle-topbar.menu-icon
-                    a(href="#")
-                        span
-    
-            section.top-bar-section
-                ul.right
-                    li.divider
-                    li: a.pagrlink(href="/home") Home
-                    li.divider
-                    li: a.pagrlink(href="/about") About Me
-                    li.divider
-                    li: a.pagrlink(href="/resume") Resume
-                    li.divider
-                    li.has-dropdown.not-click
-                        a.pagrlink(href="/projects/overview") Projects
-                        //a.pagrlink.show-for-small Projects
-                        ul.dropdown
-                            li: a.pagrlink(href="/projects/192") Project 192
-                            li: a.pagrlink(href="/projects/openmusic") OpenMusic
-                            li: a.pagrlink(href="/projects/glif") GLIF
-                            li: a.pagrlink(href="/projects/storytown") StoryTown
-                            li: a.pagrlink(href="/projects/sgpx") SGPX
-                            li: a(href="http://magic.rit.edu/users/cpc1668/") MAGIC
-                            li.divider
-                            li: a.pagrlink(href="/projects/overview") See all &rarr;
-                    li.divider
-                    li: a.pagrlink(href="/blog") Blog
-- }
+div.fixed
+    nav.top-bar
+        ul.title-area
+            li.name: h1: a.pagrlink(href="/home") Colden Cullen
+            li.toggle-topbar.menu-icon
+                a(href="#")
+                    span
+
+        section.top-bar-section
+            ul.right
+                li.divider
+                li: a.pagrlink(href="/home") Home
+                li.divider
+                li: a.pagrlink(href="/about") About Me
+                li.divider
+                li: a.pagrlink(href="/resume") Resume
+                li.divider
+                li.has-dropdown.not-click
+                    a.pagrlink(href="/projects/overview") Projects
+                    //a.pagrlink.show-for-small Projects
+                    ul.dropdown
+                        li: a.pagrlink(href="/projects/192") Project 192
+                        li: a.pagrlink(href="/projects/openmusic") OpenMusic
+                        li: a.pagrlink(href="/projects/glif") GLIF
+                        li: a.pagrlink(href="/projects/storytown") StoryTown
+                        li: a.pagrlink(href="/projects/sgpx") SGPX
+                        li: a(href="http://magic.rit.edu/users/cpc1668/") MAGIC
+                        li.divider
+                        li: a.pagrlink(href="/projects/overview") See all &rarr;
+                li.divider
+                li: a.pagrlink(href="/blog") Blog
