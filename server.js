@@ -1,9 +1,7 @@
 #!/bin/env node
 // Load dependencies
 var express = require( 'express' ),
-    stylus  = require( 'stylus' ),
-    nib     = require( 'nib' ),
-    coffee  = require( 'coffee-middleware' );
+    fs      = require( 'fs' );
 
 /**
  *  Define the sample application.
