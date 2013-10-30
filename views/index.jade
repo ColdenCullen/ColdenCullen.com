@@ -9,10 +9,13 @@ html(lang="en")
             var dev = #{dev};
             
     body
-        include partials/topbar
-        div.pagecontainer-horiz
-            include pages/home
-            include pages/about
-            include pages/resume
-            include pages/projects
-            include pages/blog
+        div.wrap
+            div.topbar
+                include partials/topbar
+            div.content
+                div.pagecontainer-horiz
+                    include pages/home
+                    include pages/about
+                    include pages/resume
+                    include pages/projects
+                    include pages/blog

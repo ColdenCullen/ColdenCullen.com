@@ -1,171 +1,20 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-  color: #000;
-  background: #fff;
-}
-ol,
-ul {
-  list-style: none;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-a img {
-  border: none;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #272822;
-  overflow: hidden;
-}
-nav.top-bar {
-  font: 2.5em "Russo One" sans-serif;
-}
-nav.top-bar ul li:not(.menu-icon) a:hover {
-  background-color: #fff;
-  color: #111;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  -ms-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-}
-nav.top-bar .name h1 a {
-  display: inline;
-}
-nav.top-bar.expanded {
-  margin-bottom: 0;
-}
-.aligner {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-section.page#home .main {
-  color: #bd63c5;
-  height: 50%;
-  text-align: center;
-  font-family: "Ubuntu Mono" sans-serif;
-}
-@media only screen and (max-width: 768px) {
-  section.page#home .main {
-    font-size: 1.4em;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-  section.page#home .main {
-    font-size: 2em;
-  }
-}
-@media only screen and (min-width: 1280px) and (min-width: 1280px) {
-  section.page#home .main {
-    font-size: 4em;
-  }
-}
-section.page#about .main {
-  color: #fff;
-}
-section.page#resume {
-  background-color: #008080;
-}
-section.page#properties {
-  background-color: #008000;
-}
-section.page#blog {
-  color: #fff;
-}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+html,body,.wrap,.content{width:100%;height:100%;overflow:hidden}
+.content{background-color:#272822}
+.aligner{width:100%;height:100%;display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:box;display:flex;-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}
+div.navbar a{font:2em 'Russo One' sans-serif;padding-top:5px;padding-bottom:5px}
+@media (min-width: 768px) and (max-width: 1024px){div.navbar a{font:1.5em 'Russo One' sans-serif;padding-top:0;padding-bottom:0}
+div.navbar{min-height:0}
+}section.page#home .main{color:#bd63c5;height:50%;text-align:center;font-family:"Ubuntu Mono" sans-serif;}
+@media only screen and (max-width: 768px){section.page#home .main{font-size:1.4em}
+}@media only screen and (min-width: 768px) and (max-width: 1280px){section.page#home .main{font-size:2em}
+}@media only screen and (min-width: 1280px) and (min-width: 1280px){section.page#home .main{font-size:4em}
+}section.page#about .main{color:#fff;background-color:#ffa500}
+section.page#resume{background-color:#008080}
+section.page#properties{background-color:#008000}
+section.page#blog{color:#fff;background-color:#000}

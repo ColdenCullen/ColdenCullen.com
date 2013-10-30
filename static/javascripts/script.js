@@ -1,31 +1,14 @@
 (function() {
-  var initSemantic,
-    _this = this;
-
-  initSemantic = function() {
-    var $topbar;
-    $('.ui.dropdown').dropdown({
-      on: 'hover',
-      delay: {
-        show: 0,
-        hide: 0
-      }
-    });
-    $topbar = $('.ui.menu.fixed');
-    $('body').css('padding-top', $topbar.height() + 'px');
-    return $topbar.css('margin-top', '-' + $topbar.height() + 'px');
-  };
+  var _this = this;
 
   jQuery(function($) {
-    if (!semantic) {
-      $(document).foundation();
-    }
     pagr({
       initialPage: routePath
     });
-    if (semantic) {
-      return initSemantic();
-    }
+    return $('.pagrlink').click(function() {
+      $('.dropdown.open .dropdown-toggle').dropdown('toggle');
+      return $('.navbar-collapse').filter('.in').collapse('toggle');
+    });
   });
 
 }).call(this);

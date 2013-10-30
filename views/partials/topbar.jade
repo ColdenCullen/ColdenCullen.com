@@ -1,0 +1,24 @@
+div.navbar.navbar-default.navbar-fixed-top
+    div.container
+        div.navbar-header
+            button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand.pagrlink(href="/home") Colden Cullen
+        div.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                li: a.pagrlink(href="/about") About
+                li: a.pagrlink(href="/resume") Resume
+                li.dropdown
+                    a.dropdown-toggle(href="/projects/overview" data-toggle="dropdown") Projects 
+                        b.caret
+                        //span.glyphicon.glyphicon-chevron-down
+                    ul.dropdown-menu
+                        li: a.pagrlink(href="/projects/overview") See All
+                        li.divider
+                        li: a.pagrlink(href="/projects/192") Project 192
+                        li: a.pagrlink(href="/projects/sgpx") SGPX
+                        li: a.pagrlink(href="#") Separated link
+                        li: a.pagrlink(href="#") One more separated link
+                li: a.pagrlink(href="/blog") Blog

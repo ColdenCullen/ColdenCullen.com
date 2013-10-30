@@ -30,8 +30,8 @@ var Site = function()
         {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
             //  allows us to run/test the app locally.
-            console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
             self.ipaddress = "127.0.0.1";
+            console.warn('No OPENSHIFT_NODEJS_IP var, using ' + self.ipaddres);
         }
     };
 
@@ -182,6 +182,7 @@ var Site = function()
             self.app.use( express.logger( 'dev' ) );
         
         //Setup stylus middleware
+        /*
         self.app.use( stylus.middleware( {
             src:    __dirname + '/',
             dest:   __dirname + '/static',
@@ -201,6 +202,7 @@ var Site = function()
             force:      dev,
             debug:      debug
         } ) );
+        */
         
         self.app.use( express.static( __dirname + '/static' ) );
     };

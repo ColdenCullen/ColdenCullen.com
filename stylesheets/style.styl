@@ -6,26 +6,14 @@ full-size()
     width: 100%
     height: 100%
 
-html, body
+html, body, .wrap
     full-size()
-    background-color: rgb( 39, 40, 34 )
     overflow: hidden
 
-// For foundation
-nav.top-bar
-    font: 2.5em "Russo One" sans-serif
-    
-    ul li:not(.menu-icon) a:hover
-        background-color: #fff
-        color: #111
-        transition: all 200ms ease-out
-     
-    .name h1 a
-        display: inline
-  
-nav.top-bar.expanded
-    margin-bottom: 0
-    
+.content
+    @extend .wrap
+    background-color: rgb( 39, 40, 34 )
+
 .aligner
     full-size()
     display: flex
@@ -33,6 +21,7 @@ nav.top-bar.expanded
     justify-content: center;
 
 // Import page styles
+@import 'partials/topbar'
 @import 'pages/home'
 @import 'pages/about'
 @import 'pages/resume'

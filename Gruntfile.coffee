@@ -1,17 +1,18 @@
 module.exports = (grunt) ->
     grunt.initConfig
-        pkg: grunt.file.readJSON 'package.json'
+        pkg: grunt.file.readJSON './package.json'
         watch:
-            stylesheets:
-                files: ['stylesheets/*.styl']
-                tasks: ['stylus']
+            stylus:
+                files: './stylesheets/*.styl'
+                tasks: 'stylus:compile'
             scripts:
-                files: ['coffeescripts/*.coffee']
-                tasks: ['coffee']
+                files: './coffeescripts/*.coffee'
+                tasks: 'coffee:compile'
+                
         stylus:
             compile:
                 options:
-                    paths: ['views']
+                    paths: ['./views']
                     use: [
                         require 'nib'
                     ]
@@ -19,7 +20,7 @@ module.exports = (grunt) ->
                         'nib'
                     ]
                 files:
-                    'static/stylesheets/style.css': ['stylesheets/style.styl']
+                    './static/stylesheets/style.css': './stylesheets/*.styl'
                 
         coffee:
             compile:
