@@ -31,7 +31,7 @@ var Site = function()
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
             //  allows us to run/test the app locally.
             self.ipaddress = "127.0.0.1";
-            console.warn('No OPENSHIFT_NODEJS_IP var, using ' + self.ipaddres);
+            console.warn('No OPENSHIFT_NODEJS_IP var, using ' + self.ipaddress);
         }
     };
 
@@ -180,29 +180,6 @@ var Site = function()
         
         if( debug )
             self.app.use( express.logger( 'dev' ) );
-        
-        //Setup stylus middleware
-        /*
-        self.app.use( stylus.middleware( {
-            src:    __dirname + '/',
-            dest:   __dirname + '/static',
-            force:  dev,
-            compile:function( str, path ) {
-                return stylus( str )
-                    .set( 'filename', path )
-                    .use( nib() )
-                    .import( 'nib' );
-            }
-        } ) );
-        
-        // Setup Coffee-Script middleware
-        self.app.use( coffee( {
-            src:        __dirname + '/coffeescripts',
-            prefix:     '/javascripts',
-            force:      dev,
-            debug:      debug
-        } ) );
-        */
         
         self.app.use( express.static( __dirname + '/static' ) );
     };
