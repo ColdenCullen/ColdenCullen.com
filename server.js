@@ -11,7 +11,7 @@ var Site = function()
     // Scope.
     var self = this;
     var dev  = process.env.DEV || true;
-    var debug = false && dev;
+    var debug = true && dev;
 
     /*  ================================================================  */
     /*  Helper functions.                                                 */

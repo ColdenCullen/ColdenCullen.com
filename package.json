@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Colden Cullens Website",
   "homepage": "http://www.ColdenCullen.com/",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
   "author": {
     "name": "Colden Cullen",
     "email": "ColdenCullen@gmail.org",
@@ -33,8 +27,7 @@
     "grunt-cli": "0.1.x",
     "grunt-contrib-watch": "0.5.x",
     "grunt-contrib-coffee": "0.7.x",
-    "grunt-contrib-stylus": "0.8.x",
-    "grunt-contrib-jade": "0.8.x"
+    "grunt-contrib-stylus": "0.8.x"
   },
   "bundleDependencies": [],
   "scripts": {

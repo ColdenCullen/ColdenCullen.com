@@ -13,6 +13,12 @@ html, body, .wrap
 .content
     @extend .wrap
     background-color: rgb( 39, 40, 34 )
+    font-family: 'Open Sans' sans-serif
+    padding-top: 51px
+
+@media (min-width: 768px) and (max-width: 1024px)
+    .content
+        padding-top: 30px
 
 .aligner
     full-size()
@@ -21,7 +27,7 @@ html, body, .wrap
     justify-content: center;
 
 // Import page styles
-@import 'partials/topbar'
+@import 'topbar'
 @import 'pages/home'
 @import 'pages/about'
 @import 'pages/resume'
