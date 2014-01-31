@@ -1,7 +1,9 @@
 #!/bin/env node
 // Load dependencies
 var express = require( 'express' ),
-    fs      = require( 'fs' );
+    fs      = require( 'fs' ),
+    sys     = require( 'sys' ),
+    exec    = require( 'child_process' ).exec;
 
 /**
  *  Define the sample application.
@@ -11,7 +13,7 @@ var Site = function()
     // Scope.
     var self = this;
     var dev  = process.env.DEV || true;
-    var debug = true && dev;
+    var debug = false && dev;
 
     /*  ================================================================  */
     /*  Helper functions.                                                 */
@@ -25,7 +27,7 @@ var Site = function()
         //  Set the environment variables we need.
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP;
         self.port      = ( process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT ) || 8080;
-
+        
         if( typeof self.ipaddress === "undefined" )
         {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
