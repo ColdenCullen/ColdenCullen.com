@@ -26,6 +26,8 @@ module.exports = (grunt) ->
             compile:
                 files:
                     'static/javascripts/script.js': 'coffeescripts/*.coffee'
+                    
+    grunt.registerTask 'default', [ 'stylus:compile', 'coffee:compile' ]
     
     grunt.loadNpmTasks 'grunt-contrib-watch'
     grunt.loadNpmTasks 'grunt-contrib-stylus'
