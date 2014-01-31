@@ -29,14 +29,6 @@
     "grunt-contrib-coffee": "0.7.x",
     "grunt-contrib-stylus": "0.8.x"
   },
-  "bundleDependencies": [],
-  "scripts": {
-<<<<<<< HEAD
-    "postinstall": "node ./node_modules/grunt-cli/bin/grunt"
-=======
-    "postinstall": "grunt"
->>>>>>> 8ab5a9618e3427671be62a6128b3a58966e69de5
-  },
   "private": true,
   "main": "server.js"
 }
