@@ -2,7 +2,7 @@
   var loadPdf, resumeUrl,
     _this = this;
 
-  resumeUrl = 'ColdenCullen-Resume.pdf';
+  resumeUrl = '/ColdenCullen-Resume.pdf';
 
   jQuery(function($) {
     pagr({

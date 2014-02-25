@@ -1,4 +1,4 @@
-resumeUrl = 'ColdenCullen-Resume.pdf'
+resumeUrl = '/ColdenCullen-Resume.pdf'
 
 jQuery ($) =>
     
