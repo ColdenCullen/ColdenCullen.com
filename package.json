@@ -27,7 +27,8 @@
     "grunt-cli": "0.1.x",
     "grunt-contrib-watch": "0.5.x",
     "grunt-contrib-coffee": "0.7.x",
-    "grunt-contrib-stylus": "0.8.x"
+    "grunt-contrib-stylus": "0.8.x",
+    "grunt-contrib-jade": "~0.10.0"
   },
   "private": true,
   "main": "server.js"
