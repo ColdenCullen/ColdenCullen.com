@@ -1,0 +1,32 @@
+.pagecontainer-horiz {
+    width: 100%;
+    height: 100%;
+}
+.pagecontainer-horiz > .pagecontainer-autogen {
+    position: relative;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+}
+.pagecontainer-horiz > .page {
+    display: inline-block;
+    height: 100%;
+}
+
+.pagecontainer-vert {
+    width: 100%;
+    height: 100%;
+}
+.pagecontainer-vert > .pagecontainer-autogen {
+    position: relative;
+    width: 100%;
+}
+.pagecontainer-vert > .page {
+    width: 100%;
+}
