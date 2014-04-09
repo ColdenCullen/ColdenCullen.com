@@ -1,6 +1,0 @@
-[submodule "static/lib/pagr"]
-	path = static/lib/pagr
-	url = https://github.com/ColdenCullen/pagr.git
-[submodule "static/lib/pdf.js"]
-	path = static/lib/pdf.js
-	url = https://github.com/mozilla/pdf.js.git
